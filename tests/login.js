@@ -7,5 +7,5 @@ chai.use(chaiHttp);
 
 
 describe('login controller', function() {
-  it('should ask use for login information /login GET');
+  it('should list the questions for login information /login GET');
 });
