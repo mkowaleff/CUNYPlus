@@ -5,7 +5,6 @@
   "main": "index.js",
   
   "scripts": {
-    "start": "node app.js",
     "start": "node_modules/.bin/nodemon -L app.js",
     "test": "node_modules/mocha/bin/mocha --recursive tests/"
   },
