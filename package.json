@@ -4,6 +4,7 @@
   "description": "Basic index js installation by MK",
   "main": "index.js",
   "scripts": {
+    "start": "node app.js",
     "test": "test"
   },
   "repository": {
