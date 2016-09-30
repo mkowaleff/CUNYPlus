@@ -1,12 +1,11 @@
 var express = require('express');
 var app = express();
+var router = express.Router();
 
-app.get('/', function (req, res){
-	res.send('Hello World!');
+
+app.use(require('./controllers'));
+
+
+app.listen(1337, function () {
+  console.log('CUNYPlus listening on port 1337!');
 });
-
-app.listen(3000, function(){
-	console.log('Example app listening on port 3000!');
-});
-
-  }
