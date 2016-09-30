@@ -8,5 +8,5 @@ chai.use(chaiHttp);
 
 describe('groups controller', function() {
   it('should list ALL groups on /group GET');
-  it('should add a SINGLE group on /group POST');
+  it('should add a SINGLE group post on /group POST');
 });
