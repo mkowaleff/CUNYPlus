@@ -5,7 +5,7 @@ router.get('/', function (req, res){
  	res.send("Activities");
 });
 
-router.get('/createPost', function (req, res){
+router.post('/createPost', function (req, res){
  	res.send('Create a new post');
 });
 
