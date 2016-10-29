@@ -13,8 +13,8 @@ router.get('/internship', function (req, res){
  	res.send('Internship');
 });
 
-router.get('/major', function (req, res){
- 	res.send('Major');
+router.get('/General', function (req, res){
+ 	res.send('General');
 });
 
 router.get('/groups', function (req, res){
@@ -23,4 +23,4 @@ router.get('/groups', function (req, res){
 
 router.use('/posts', require('./posts'));
 
-module.exports = router; 
+module.exports = router;
