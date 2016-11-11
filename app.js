@@ -1,11 +1,16 @@
 var express = require('express');
 const exphbs = require('express-handlebars');
+// const models = require('./models/');
+// const passport = require('./middlewares/authentication');
+// const viewHelpers = require('./middlewares/viewHelpers')
+
 var app = express();
 var router = express.Router();
 
 
 app.use(require('./controllers'));
 app.use(express.static('./public'));
+
 
 app.engine('handlebars', exphbs({
   layoutsDir: './views/layouts',

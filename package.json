@@ -1,35 +1,19 @@
 {
-  "name": "index.js",
+  "name": "CUNYPlus_Test",
   "version": "1.0.0",
-  "description": "Basic index js installation by MK",
-  "main": "index.js",
-  "scripts": {
-    "start": "node_modules/.bin/nodemon -L app.js",
-    "test": "node_modules/mocha/bin/mocha --recursive tests/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "-"
-  },
-  "keywords": [
-    "-"
-  ],
-  "author": "Min Chen",
-  "license": "UNLICENSED",
+  "description": "",
+  "main": "app.js",
   "dependencies": {
     "chai-http": "^3.0.0",
+    "express-handlebars": "^3.0.0",
     "express": "^4.14.0",
-    "express-handlebars": "3.0.0",
-    "pg": "6.0.3",
-    "pg-hstore": "2.3.2",
-    "sequelize": "3.23.6",
-    "sequelize-cli": "^2.4.0",
-    "speakingurl": "9.0.0"
+    "chai": "^3.5.0"
   },
-  "devDependencies": {
-    "chai": "3.5.0",
-    "mocha": "3.1.0",
-    "nodemon": "1.10.2"
-  }
-
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

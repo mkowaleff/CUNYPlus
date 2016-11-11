@@ -8,7 +8,7 @@
 
 body {
     margin-top: 100px;
-    background-color: #222;
+    background-color: #4E7AC7;
 }
 
 @media(min-width:768px) {
@@ -122,7 +122,7 @@ ul.alert-dropdown {
         border: none;
         border-radius: 0;
         overflow-y: auto;
-        background-color: #222;
+        background-color: #4E7AC7;
         bottom: 0;
         overflow-x: hidden;
         padding-bottom: 40px;
@@ -224,4 +224,10 @@ ul.alert-dropdown {
 
 .panel-yellow > a:hover {
     color: #df8a13;
+}
+
+/*keep menus on the right*/
+@media (min-width: 768px){
+  #wrapper {padding-right: 225px; padding-left: 0;}
+  .side-nav{right: 0;left: auto;}
 }
