@@ -1,6 +1,6 @@
 
 a, a:hover, a:focus {
-	color: #7FB2F0;
+	color: white;
 }
 
 /* === Navbar === */
@@ -65,7 +65,7 @@ a, a:hover, a:focus {
 	color: #254378;
 }
 .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li.active > a {
-	color: #254378;
+	color: white;
 }
 /* Navbar inverse dropdown */
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {

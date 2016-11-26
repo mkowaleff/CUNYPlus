@@ -1,55 +1,60 @@
-<div class="container">
+<div class="container" id="postPage">
+	<div class="row">
+		<div class="col-md-3"></div>
+	    <div class="col-md-6">
 
-    <div class="row">
-        <div class="box">
-            <div class="col-lg-12">
-                <hr>
-                <h2 class="intro-text text-center">
-                    <strong>Posts</strong>
-                </h2>
-                <hr>
-            </div>
-            <div class="col-md-6">
-                <img class="img-responsive img-border-left" src="/img/slide-2.jpg" alt="">
-            </div>
-            <div class="col-md-6">
-                <p>This is a great place to introduce your company or project and describe what you do.</p>
-                <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.</p>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-            </div>
-            <div class="clearfix"></div>
-        </div>
+
+
+        <section class="post-form">
+    		  <form action="" method="POST">
+            <h1>Create Post</h1>
+    		    <div class="form-group">
+    		        <label for="title">Title</label>
+    		        <input type="text" class="form-control" name="title" />
+    		    </div>
+
+						<div class="form-group">
+    		        <label for="title">Link</label>
+    		        <input type="text" class="form-control" name="title" />
+    		    </div>
+
+    		    <div class="form-group">
+    		        <label for="description">Description</label>
+    		        <textarea rows="5" class="form-control" name="description" ></textarea>
+    		    </div>
+
+						<div class="control-group">
+	            <div class="info">
+	              <label class="control-label" for="selectbasic">Share to</label>
+								<br>
+	            </div>
+	              <select id="selectbasic" name="selectbasic" class="input-xlarge required">
+	                <option>Select</option>
+	                <option>General</option>
+	                <option>Events</option>
+	                <option>Internship</option>
+	                <option>Group 1</option>
+	                <option>Group 2</option>
+	                <option>More</option>
+	              </select>
+								<br>
+								<br>
+	          </div>
+
+    		    <!-- <div class="form-group">
+    		        <p><span class="require">*</span> - required fields</p>
+    		    </div> -->
+
+    		    <div class="form-group">
+    		        <button type="submit" class="btn btn-primary">Create</button>
+    		        <button class="btn btn-default"><a id="cancel" href="/discussions">Cancel</a></button>
+    		    </div>
+
+    		 </form>
+       </section>
+
+
     </div>
 
-    <div class="row">
-        <div class="box">
-            <div class="col-lg-12">
-                <hr>
-                <h2 class="intro-text text-center">Our
-                    <strong>Team</strong>
-                </h2>
-                <hr>
-            </div>
-            <div class="col-sm-4 text-center">
-                <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                <h3>John Smith
-                    <small>Job Title</small>
-                </h3>
-            </div>
-            <div class="col-sm-4 text-center">
-                <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                <h3>John Smith
-                    <small>Job Title</small>
-                </h3>
-            </div>
-            <div class="col-sm-4 text-center">
-                <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                <h3>John Smith
-                    <small>Job Title</small>
-                </h3>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-
+	</div>
 </div>
