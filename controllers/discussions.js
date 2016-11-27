@@ -5,7 +5,7 @@ router.get('/', function (req, res){
  	res.render("discussions");
 });
 
-router.get('/activities', function (req, res){
+router.get('/events', function (req, res){
  	res.send("Activities");
 });
 
