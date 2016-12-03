@@ -1,19 +1,27 @@
 {
-  "name": "CUNYPlus_Test",
+  "name": "cunyplus",
   "version": "1.0.0",
-  "description": "",
+  "description": " ",
   "main": "app.js",
-  "dependencies": {
-    "chai-http": "^3.0.0",
-    "express-handlebars": "^3.0.0",
-    "express": "^4.14.0",
-    "chai": "^3.5.0"
-  },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Min",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "connect-flash": "*",
+    "cookie-parser": "^1.4.1",
+    "express": "*",
+    "express-handlebars": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "mongodb": "*",
+    "mongoose": "*",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*"
+  }
 }

@@ -3,17 +3,22 @@
 
     <div id="big-form" class="well auth-box">
       <h1 class="text-center">Sign Up</h1>
-      <form method="post" action="#" role="signUp">
+      <form method="post" action="/signup" role="signUp">
+        <!-- respond to validation -->
+        {{#if errors}}
+          {{#each errors}}
+            <div class="alert alert-danger">{{msg}}</div>
+          {{/each}}
+        {{/if}}
 
         <fieldset>
 
           <p><font size="2" color="red"><span class="text-danger">*</span>Required</font></p>
-
           <!-- Name -->
           <div class="form-group">
             <label class=" control-label" for="textinput">Full Name<span class="text-danger">*</span></label>
             <div class="">
-              <input id="textinput" name="textinput" placeholder="" class="form-control input-md" type="text">
+              <input id="textinput" name="username" placeholder="" class="form-control input-md" type="text">
             </div>
           </div>
 
@@ -21,22 +26,22 @@
           <div class="form-group">
             <label class=" control-label" for="textinput">CUNY Email<span class="text-danger">*</span></label>
             <div class="">
-              <input id="textinput" name="textinput" placeholder="" class="form-control input-md" type="text">
+              <input id="textinput" name="email" placeholder="" class="form-control input-md" type="text">
             </div>
           </div>
 
           <!-- Password input-->
           <div class="form-group">
-            <label class=" control-label" for="passwordinput">Password<span class="text-danger">*</span></label>
+            <label class=" control-label" for="password">Password<span class="text-danger">*</span></label>
             <div class="">
-              <input id="passwordinput" name="passwordinput" placeholder="" class="form-control input-md" type="password">
+              <input id="passwordinput" name="password" placeholder="" class="form-control input-md" type="password">
             </div>
           </div>
 
           <div class="form-group">
-            <label class=" control-label" for="passwordinput">Confirm Password<span class="text-danger">*</span></label>
+            <label class=" control-label" for="password">Confirm Password<span class="text-danger">*</span></label>
             <div class="">
-              <input id="passwordinput" name="passwordinput" placeholder="" class="form-control input-md" type="password">
+              <input id="passwordinput" name="password2" placeholder="" class="form-control input-md" type="password">
             </div>
           </div>
 
@@ -45,7 +50,7 @@
           <div class="form-group">
             <label class=" control-label" for="selectbasic">College<span class="text-danger">*</span></label>
             <div class="">
-              <select id="selectbasic" name="selectbasic" class="form-control">
+              <select id="selectbasic" name="school" class="form-control">
                 <option>Select</option>
 
                 <option>Brooklyn College</option>
@@ -65,28 +70,28 @@
             <div class="">
               <div class="radio">
                 <label for="radios-0">
-                  <input name="radios" id="radios-0" value="1" checked="checked" type="radio">Male</label>
+                  <input name="gender" id="radios-0" value="1" checked="checked" type="radio">Male</label>
               </div>
               <div class="radio">
                 <label for="radios-1">
-                  <input name="radios" id="radios-1" value="2" type="radio">Female</label>
+                  <input name="gender" id="radios-1" value="2" type="radio">Female</label>
               </div>
             </div>
           </div>
 
-          <!-- File Button -->
-          <div class="form-group">
+          <!-- upload photo -->
+          <!-- <div class="form-group">
             <label class=" control-label" for="filebutton">Profile Photo</label>
             <div class="">
               <input id="filebutton" name="filebutton" class="input-file" type="file">
             </div>
-          </div>
+          </div> -->
 
           <!-- Select Major -->
           <div class="form-group">
             <label class=" control-label" for="selectmultiple">Major<span class="text-danger">*</span></label>
             <div class="">
-              <select id="selectmultiple" name="selectmultiple" class="form-control" multiple="multiple">
+              <select id="selectmultiple" name="major" class="form-control" multiple="multiple">
                 <option>Art</option>
                 <option>Accounting</option>
                 <option>Biology</option>
@@ -101,7 +106,7 @@
           <div class="form-group">
             <label class=" control-label" for="selectmultiple">Minor</label>
             <div class="">
-              <select id="selectmultiple" name="selectmultiple" class="form-control" multiple="multiple">
+              <select id="selectmultiple" name="minor" class="form-control" multiple="multiple">
                 <option>Art</option>
                 <option>Accounting</option>
                 <option>Biology</option>
@@ -117,15 +122,15 @@
           <div class="form-group">
             <label class=" control-label" for="textarea">Personal Statement</label>
             <div class="">
-              <textarea rows="7" class="form-control" id="textarea" name="textarea" placeholder="Introduce yourself"></textarea>
+              <textarea rows="7" class="form-control" id="textarea" name="intro" placeholder="Introduce yourself"></textarea>
             </div>
           </div>
 
 
           <div>
             <div class="extra-space-l"></div>
-            <a class="btn btn-blank" href="/discussions" target="_blank" role="button" style="background-color:white;">Sign Up</a>
-          </div>
+            <button class="btn btn-blank" type="submit" target="_blank" role="button" style="background-color:white;">Sumbit</button>
+         </div>
 
         </fieldset>
       </form>

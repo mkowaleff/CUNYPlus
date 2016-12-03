@@ -63,35 +63,33 @@
 
                   <!-- Collect the nav links, forms, and other content for toggling -->
                   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                      <ul class="nav navbar-nav navbar-right">
-
-                        {{#if cur_user}}
-							                 <li class="dropdown"><a href="/">Home</a></li>
-                        <li class="dropdown"><a href="/discussions">Discussions</a></li>
-                        <li class="dropdown"><a href="/posts">Post</a></li>
-                        <!-- current user dropdown menu -->
+                    <ul class="nav navbar-nav navbar-right">
+                    {{#if user}}
+                        <li class="dropdown"><a href="/">Home</a></li>
                         <li class="dropdown">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Min <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                               <li>
                                   <a href="/profile"><i class="fa fa-fw fa-user"></i> Profile</a>
                               </li>
-                              <li>
+<!--                               <li>
                                   <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
-                              </li>
+                              </li> -->
                               <li class="divider"></li>
                               <li id="logout">
-                                <a href="#"><i class="fa fa-fw fa-power-off" ></i> Log Out</a>
+                                <a href="/logout"><i class="fa fa-fw fa-power-off" ></i> Log Out</a>
                               </li>
                             </ul>
                         </li>
-                        <!--End current user dropdown menu -->
+                        <li class="dropdown"><a href="/discussions">Discussions</a></li>
+                        <li class="dropdown"><a href="/posts">Post</a></li>
 
-                        {{else}}
+                    {{else}}
                         <li class="dropdown"><a href="/login">Login</a></li>
                         <li class="dropdown"><a href="/signup">Sign Up</a></li>
                         {{/if}}
-                      </ul>
+
+                    </ul>
                   </div><!-- /.navbar-collapse -->
                 </div><!-- /.container -->
               </nav>
@@ -101,18 +99,20 @@
           <!-- ========= END HEADER =========-->
 
 
-          {{{body}}}
+              {{{body}}}
+
+
 
 
 
           <div class="footer">
-               	<div class="container text-center wow fadeIn" data-wow-delay="0.4s">
-                 	<p class="copyright">Copyright &copy; 2016 CUNYPlus </p>
+                <div class="container text-center wow fadeIn" data-wow-delay="0.4s">
+                  <p class="copyright">Copyright &copy; 2016 CUNYPlus </p>
                  </div>
                </div>
-         		</footer>
+            </footer>
 
-
+  </div>
   <!-- Plugins JS -->
   <script src="/js/jquery-1.11.1.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
@@ -123,19 +123,4 @@
   <script src="/js/theme.js"></script>
   <!-- <script src="/js/jquery.js"></script> -->
 
-  {{#if cur_user}}
-  <script>
-    ;(function() {
-      $('#logout').click(function() {
-        $.post("/logout", function() {
-          window.location.href = '/';
-        });
-      });
-    })();
-    </script>
-  {{/if}}
-
   </body>
-
-
-</html>
