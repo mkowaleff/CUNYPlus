@@ -1,0 +1,35 @@
+
+/*post page*/
+body{
+  background-image: url(../../img/slider-bg.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#postPage{
+     margin-top: 170px;
+     margin-bottom: 500px;
+
+}
+#cancel{
+  color: white;
+}
+
+
+  .intro-text{
+    font-size: 40px;
+    position: relative;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+
+  }
+
+#account{
+  color:#3078B3;
+}
