@@ -1,0 +1,118 @@
+<link href="/css/profile/profile.css" rel="stylesheet" type="text/css">
+<section class="profile">
+  <div class="container">
+
+  <form class="form-horizontal">
+  <fieldset>
+
+  <div class="control-group">
+    <label class="control-label" for="textinput">Full Name</label>
+    <div class="controls">
+      <input id="textinput" name="textinput" type="text" placeholder="Nicholas (LI Import)" class="input-xlarge required">
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div class="control-group">
+    <label class="control-label" for="textinput">CUNY Email</label>
+    <div class="controls">
+      <input id="textinput" name="textinput" type="text" placeholder="(LI Import)" class="input-xlarge" disabled>
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div class="control-group">
+    <label class="control-label" for="textinput">Title</label>
+    <div class="controls">
+      <input id="textinput" name="textinput" type="text" placeholder="Strategy Director (Autocomplete)" class="input-xlarge required">
+
+    </div>
+  </div>
+
+
+  <!-- Select Basic -->
+  <div class="control-group">
+    <label class="control-label" for="selectbasic">College</label>
+    <div class="controls">
+      <select id="selectbasic" name="selectbasic" class="input-xlarge required">
+        <option>Select</option>
+        <option>Brooklyn College</option>
+        <option>Baruch College</option>
+        <option>Hunter College</option>
+        <option>Lehman College</option>
+        <option>Queens College</option>
+        <option>York College</option>
+        <option>More</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- User type only appears when company type is undefined in the vendori database-->
+  <div class="control-group">
+    <label class="control-label" for="selectbasic">Major</label>
+    <div class="controls">
+      <select id="selectbasic" name="selectbasic" class="input-xlarge required">
+          <option>Select</option>
+          <option>Art</option>
+          <option>Accounting</option>
+          <option>Biology</option>
+          <option>Business</option>
+          <option>Computer Science</option>
+          <option>Physics</option>
+          <option>More</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label" for="selectbasic">Minor</label>
+    <div class="controls">
+      <select id="selectbasic" name="selectbasic" class="input-xlarge required">
+          <option>Select</option>
+          <option>Art</option>
+          <option>Accounting</option>
+          <option>Biology</option>
+          <option>Business</option>
+          <option>Computer Science</option>
+          <option>Physics</option>
+          <option>More</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label" for="radios">Gender</label>
+    <div class="controls">
+      <label class="radio inline" for="radios-0">
+        <input type="radio" name="radios" id="radios-0" value="Mobile Phone">
+        Female
+      </label>
+      <label class="radio inline" for="radios-1">
+        <input type="radio" name="radios" id="radios-1" value="Work Phone" checked="checked">
+        Male
+      </label>
+    </div>
+  </div>
+
+
+
+
+  <!-- User can enter companies not in Vendori database. Autocomplete with companies type = vendor -->
+  <div class="control-group">
+    <label class="control-label" for="textarea">Personal Statement</label>
+    <div class="controls">
+      <textarea id="textarea" name="textarea" class="one-required" title="Add all of your vendors so you don't miss out on any new opportunities."></textarea>
+    </div>
+  </div>
+
+  <!-- Button -->
+  <div class="control-group">
+    <label class="control-label" for="singlebutton"></label>
+    <div class="controls">
+      <button id="singlebutton" name="singlebutton" class="btn btn-primary">Update</button>
+    </div>
+  </div>
+
+  </fieldset>
+  </form>
+</section>

@@ -1,118 +1,129 @@
 <link href="/css/profile/profile.css" rel="stylesheet" type="text/css">
-<section class="profile">
-  <div class="container">
 
-  <form class="form-horizontal">
-  <fieldset>
+<div class="container">
+      <div class="row">
 
-  <div class="control-group">
-    <label class="control-label" for="textinput">Full Name</label>
-    <div class="controls">
-      <input id="textinput" name="textinput" type="text" placeholder="Nicholas (LI Import)" class="input-xlarge required">
+        <div class ="col-md-offset-3 col-md-6">
+
+       <div class="well">
+						<p class="profile_text"><strong>Full Name:&nbsp; &nbsp;</strong>{{user.username}}</p>
+						<hr>
+						<p class="profile_text"><strong>Email:&nbsp; &nbsp;</strong>{{user.email}}</p>
+						<hr>
+						<p class="profile_text"><strong>College:&nbsp; &nbsp;</strong>{{user.school}}</p>
+						<hr>
+						<p class="profile_text"><strong>Major:&nbsp; &nbsp;</strong>{{user.major}}</p>
+						<hr>
+						<p class="profile_text"><strong>Minor:&nbsp; &nbsp;</strong>{{user.minor}}</p>
+						<hr>
+						<p class="profile_text"><strong>Gender:&nbsp; &nbsp;</strong>{{user.gender}}</p>
+						<hr>
+						<p class="profile_text"><strong>Personal Statement:&nbsp; &nbsp;</strong>{{user.intro}}</p>
+						<br>
+						<br>
+
+
+						<button class="btn btn-default edit-recipe" data-toggle="modal" data-target="#editFormModal"
+						data-id="{id}" data-name="{name}" data-ingredients="{ingredients}" data-directions="{directions}">
+						Update
+						</button>
+
+
+      </div><!-- well -->
+
+			<div class="modal fade" id="editFormModal" tabindex="-1" role="dialog" aria-labelledby="editFormModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="post" action="/edit">
+              <input type="hidden" id="edit-form-id" name="id" />
+
+
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Edit Personal Info</h4>
+              </div>
+
+              <div class="modal-body">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" class="form-control" name="username" id="edit-form-name" value="{{user.username}}"/>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input name="email" class="form-control" id="edit-form-ingredients" value="{{user.email}}"/>
+                </div>
+                <div class="form-group">
+                    <label>College</label>
+										<select id="selectbasic" name="school" class="form-control">
+			                <option>{{user.school}}</option>
+			                <option>Brooklyn College</option>
+			                <option>Baruch College</option>
+			                <option>Hunter College</option>
+			                <option>Lehman College</option>
+			                <option>Queens College</option>
+			                <option>York College</option>
+			                <option>More</option>
+			              </select>
+                </div>
+
+								<div class="form-group">
+										<label>Major</label>
+										<select id="selectbasic" name="major" class="form-control">
+											<option>{{user.major}}</option>
+											<option>Art</option>
+											<option>Accounting</option>
+											<option>Biology</option>
+											<option>Business</option>
+											<option>Computer Science</option>
+											<option>Physics</option>
+											<option>More</option>
+										</select>
+								</div>
+
+								<div class="form-group">
+                    <label>Minor</label>
+										<select id="selectbasic" name="minor" class="form-control">
+											<option>{{user.minor}}</option>
+			                <option>Art</option>
+			                <option>Accounting</option>
+			                <option>Biology</option>
+			                <option>Business</option>
+			                <option>Computer Science</option>
+			                <option>Physics</option>
+			                <option>More</option>
+			              </select>
+                </div>
+
+								<div class="form-group">
+            			<label>Gender</label>
+									<input type="text" class="form-control" name="username" id="edit-form-name" value="{{user.gender}}"/>
+                </div>
+
+								<div class="form-group">
+                    <label>Personal Statement</label>
+                    <textarea name="directions" class="form-control" id="edit-form-directions" rows="4" >{{user.intro}}</textarea>
+								</div>
+
+
+              </div>
+
+							<!-- buttons -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <input type="submit" class="btn btn-primary" value="Save" />
+              </div>
+
+          </form>
+        </div>
+      </div>
     </div>
-  </div>
-
-  <!-- Text input-->
-  <div class="control-group">
-    <label class="control-label" for="textinput">CUNY Email</label>
-    <div class="controls">
-      <input id="textinput" name="textinput" type="text" placeholder="(LI Import)" class="input-xlarge" disabled>
-    </div>
-  </div>
-
-  <!-- Text input-->
-  <div class="control-group">
-    <label class="control-label" for="textinput">Title</label>
-    <div class="controls">
-      <input id="textinput" name="textinput" type="text" placeholder="Strategy Director (Autocomplete)" class="input-xlarge required">
-
-    </div>
-  </div>
 
 
-  <!-- Select Basic -->
-  <div class="control-group">
-    <label class="control-label" for="selectbasic">College</label>
-    <div class="controls">
-      <select id="selectbasic" name="selectbasic" class="input-xlarge required">
-        <option>Select</option>
-        <option>Brooklyn College</option>
-        <option>Baruch College</option>
-        <option>Hunter College</option>
-        <option>Lehman College</option>
-        <option>Queens College</option>
-        <option>York College</option>
-        <option>More</option>
-      </select>
-    </div>
-  </div>
-
-  <!-- User type only appears when company type is undefined in the vendori database-->
-  <div class="control-group">
-    <label class="control-label" for="selectbasic">Major</label>
-    <div class="controls">
-      <select id="selectbasic" name="selectbasic" class="input-xlarge required">
-          <option>Select</option>
-          <option>Art</option>
-          <option>Accounting</option>
-          <option>Biology</option>
-          <option>Business</option>
-          <option>Computer Science</option>
-          <option>Physics</option>
-          <option>More</option>
-      </select>
-    </div>
-  </div>
-
-  <div class="control-group">
-    <label class="control-label" for="selectbasic">Minor</label>
-    <div class="controls">
-      <select id="selectbasic" name="selectbasic" class="input-xlarge required">
-          <option>Select</option>
-          <option>Art</option>
-          <option>Accounting</option>
-          <option>Biology</option>
-          <option>Business</option>
-          <option>Computer Science</option>
-          <option>Physics</option>
-          <option>More</option>
-      </select>
-    </div>
-  </div>
-
-  <div class="control-group">
-    <label class="control-label" for="radios">Gender</label>
-    <div class="controls">
-      <label class="radio inline" for="radios-0">
-        <input type="radio" name="radios" id="radios-0" value="Mobile Phone">
-        Female
-      </label>
-      <label class="radio inline" for="radios-1">
-        <input type="radio" name="radios" id="radios-1" value="Work Phone" checked="checked">
-        Male
-      </label>
-    </div>
-  </div>
+			</div>
+		</div>
+</div>
 
 
 
 
-  <!-- User can enter companies not in Vendori database. Autocomplete with companies type = vendor -->
-  <div class="control-group">
-    <label class="control-label" for="textarea">Personal Statement</label>
-    <div class="controls">
-      <textarea id="textarea" name="textarea" class="one-required" title="Add all of your vendors so you don't miss out on any new opportunities."></textarea>
-    </div>
-  </div>
-
-  <!-- Button -->
-  <div class="control-group">
-    <label class="control-label" for="singlebutton"></label>
-    <div class="controls">
-      <button id="singlebutton" name="singlebutton" class="btn btn-primary">Update</button>
-    </div>
-  </div>
-
-  </fieldset>
-  </form>
-</section>
+  <script src="/js/profile.js"></script>
